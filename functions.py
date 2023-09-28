@@ -1,0 +1,16 @@
+def get_todos(filepath_arg):
+    """Read do list from the text document"""
+    with open(filepath_arg, 'r') as file_local:
+        todos_local = file_local.readlines()
+    return todos_local
+
+
+def write_todos(filename_arg,todos_arg):
+    """Write do list in the text document"""
+    with open(filename_arg, 'w') as file_local:
+        file_local.writelines(todos_arg)
+
+
+if __name__ == "__main__":
+    print('Hello')
+    print(get_todos('files/todos.txt'))
